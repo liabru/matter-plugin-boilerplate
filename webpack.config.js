@@ -13,7 +13,7 @@ const banner = `${name} ${pkg.version} by ${author} ${date}
 ${pkg.homepage}
 License ${pkg.license}`;
 
-var postBuildTasks = { 
+var postBuildTasks = {
   apply: function(compiler) {
     compiler.plugin('after-emit', function(compiler, callback) {
       var matterToolsPath = path.dirname(require.resolve('matter-tools')) + '/build/matter-tools.demo.js';
@@ -27,7 +27,7 @@ var postBuildTasks = {
           /(['"])(.*)(['"][;,\s]*\/\/\s*PLUGIN_REPO_URL)/g
         ],
         with: [
-          "$1" + name + "$3", 
+          "$1" + name + "$3",
           "$1" + pkg.version + "$3",
           "$1" + pkg.repository.url.replace('.git', '') + "$3"
         ]
@@ -62,7 +62,7 @@ module.exports = {
     libraryTarget: 'umd'
   },
   externals: {
-    'matter-js': 'Matter'
+    'matter-js': 'matter-js'
   },
   module: {
     loaders: [{
