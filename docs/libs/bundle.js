@@ -1,15 +1,15 @@
 /*!
- * matter-plugin-boilerplate 0.1.1 by Liam Brummitt 2017-02-12
+ * matter-plugin-boilerplate 0.1.2 by Liam Brummitt 2017-05-15
  * https://github.com/liabru/matter-plugin-boilerplate
  * License MIT
  */
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("Matter"));
+		module.exports = factory(require("matter-js"));
 	else if(typeof define === 'function' && define.amd)
-		define(["Matter"], factory);
+		define(["matter-js"], factory);
 	else if(typeof exports === 'object')
-		exports["MatterPluginBoilerplate"] = factory(require("Matter"));
+		exports["MatterPluginBoilerplate"] = factory(require("matter-js"));
 	else
 		root["MatterPluginBoilerplate"] = factory(root["Matter"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_0__) {
@@ -103,7 +103,7 @@ var Matter = __webpack_require__(0);
 var PluginExample = {
   // plugin meta
   name: 'matter-plugin-boilerplate', // PLUGIN_NAME
-  version: '0.1.0', // PLUGIN_VERSION
+  version: '0.1.1', // PLUGIN_VERSION
   for: 'matter-js@^0.12.0',
 
   // installs the plugin where `base` is `Matter`
